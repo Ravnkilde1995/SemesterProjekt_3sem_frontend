@@ -8,6 +8,7 @@ import Header from "./components/header/Header.jsx";
 import About from "./components/about/About.jsx";
 import {Route, Routes} from "react-router-dom";
 import apiFacade from "./apiFacade";
+import Libery from "./components/libary/Libary";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/about" element={<About/>}/>
+                <Route path="/libery" element={<Libery/>}/>
                 <Route path="/login"
                        element={<LogIn loggedIn={loggedIn} setLoggedIn={setLoggedIn} user={user} setUser={setUser}/>}/>
 

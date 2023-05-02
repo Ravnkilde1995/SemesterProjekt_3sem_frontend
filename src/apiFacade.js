@@ -1,5 +1,8 @@
 const URL = "http://localhost:8080";
 
+// Denne streng burde nok gemmes væk
+const GoogleURL = "https://www.googleapis.com/books/v1/volumes?q=:keyes&key=AIzaSyCZoXruFbr28UKR2Z6HXgtXqnpRA0shUTk"
+
 function handleHttpErrors(res) {
     if (!res.ok) {
         return Promise.reject({status: res.status, fullError: res.json()})
@@ -24,6 +27,12 @@ function apiFacade() {
         const options = makeOptions("GET", true); //True add's the token
         return fetch(URL + ressource, options).then(handleHttpErrors);
     }
+
+    const fetchDataGoogle = () => {
+        const options = makeOptions("GET");
+       return fetch(GoogleURL, options).then(handleHttpErrors);
+      }
+
     const makeOptions = (method, addToken, body) => {
         var opts = {
             method: method,
@@ -76,6 +85,7 @@ function apiFacade() {
         login,
         logout,
         fetchData,
+        fetchDataGoogle,
         readJwtToken,
     }
 }

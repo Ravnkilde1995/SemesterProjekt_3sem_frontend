@@ -10,6 +10,8 @@ import {Route, Routes} from "react-router-dom";
 import apiFacade from "./apiFacade";
 import Library from "./components/library/Library.jsx";
 import Contact from "./components/contact/Contact.jsx";
+import Registration from "./components/registration/registration";
+import Bookshelf from "./components/bookshelf/Bookshelf.jsx";
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
                 <Route path="/about" element={<About/>}/>
                 <Route path="/contact" element={<Contact/>}/>
                 <Route path="/library" element={<Library/>}/>
+                <Route path="/bookshelf" element={<Bookshelf/>}/>
+                <Route path="/registration" element={<Registration/>}/>
                 <Route path="/login"
                        element={<LogIn loggedIn={loggedIn} setLoggedIn={setLoggedIn} user={user} setUser={setUser}/>}/>
 
@@ -35,6 +39,7 @@ function App() {
             {/* <Home/> */}
             {/* <About/> */}
             {/* <Library/> */}
+
 
         </div>
     )

@@ -3,8 +3,6 @@ import "./header.css";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import LoginForm from "../loginform/LoginForm.jsx";
 
 import LoggedIn from "../loggedin/LoggedIn.jsx";
 import facade from "../../apiFacade.js";
@@ -37,16 +35,16 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="Nav" fill="fill">
-                            <a className="nav-item" href="/home">Home</a>
                             <a className="nav-item" href="/about">About</a>
                             <a className="nav-item" href="/contact">Contact</a>
+                            <a className="nav-item" href="/library">Library</a>
                         </Nav>
                         <Nav className="ms-auto">
 
 
                             {!loggedIn ? (<LogIn login={login}/>) :
                                 (<div className="login-container">
-                                    <Badge bg = "primary">
+                                    <Badge bg="primary">
                                         <LoggedIn user={user}/>
                                     </Badge>
                                     <button onClick={logout}>Logout</button>

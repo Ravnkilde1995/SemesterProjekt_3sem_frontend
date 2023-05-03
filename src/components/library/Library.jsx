@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import facade from "../../apiFacade.js";
 
-import "./libary.css";
+import "./library.css";
 
 function Libery() {
     const [dataFromServer, setDataFromServer] = useState("Loading...");

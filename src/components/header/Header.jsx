@@ -35,7 +35,6 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="Nav" fill="fill">
-                            <a className="nav-item" href="/home">Home</a>
                             <a className="nav-item" href="/about">About</a>
                             <a className="nav-item" href="/contact">Contact</a>
                             <a className="nav-item" href="/library">Library</a>
@@ -45,7 +44,7 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
 
                             {!loggedIn ? (<LogIn login={login}/>) :
                                 (<div className="login-container">
-                                    <Badge bg = "primary">
+                                    <Badge bg="primary">
                                         <LoggedIn user={user}/>
                                     </Badge>
                                     <button onClick={logout}>Logout</button>

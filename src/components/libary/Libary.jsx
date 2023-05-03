@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import facade from "../../apiFacade.js";
+import Table from "react-bootstrap/Table";
 
 import "./libary.css";
 
@@ -30,34 +31,33 @@ function Libery() {
           {/*Vi mapper hvert item vi har fetchet */}
     
           {bookList.map((item) => {
-            //console.log("hello hello", item);
+            console.log("hello hello", item);
             //console.log("Nummer 2", item.id);
             //console.log("Nummer 3", item.etag);
     
             return (
               <>
-              <h1>velkommen til Libery her mangler styling</h1>
-            //     <br />
-            //     <Table bordered hover>
-            //       <thead>
-            //         <tr>
-            //           <th style={{ width: "20%" }}>Title</th>
-            //           <th style={{ width: "12%" }}>Author</th>
-            //           <th style={{ width: "12%" }}>Category</th>
-            //           <th style={{ width: "50%" }}>Description</th>
-            //           <th style={{ width: "6%" }}>Rating</th>
-            //         </tr>
-            //       </thead>
-            //       <tbody key={item.id}>
-            //         <tr>
-            //           <td>{item.volumeInfo.title}</td>
-            //           <td>{item.volumeInfo.authors}</td>
-            //           <td>{item.volumeInfo.categories}</td>
-            //           <td>{item.volumeInfo.description}</td>
-            //           <td>{item.volumeInfo.averageRating}</td>
-            //         </tr>
-            //       </tbody>
-            //     </Table>
+                <br />
+                <Table bordered hover>
+                  <thead>
+                   <tr>
+                     <th style={{ width: "20%" }}>Title</th>
+                      <th style={{ width: "12%" }}>Author</th>
+                      <th style={{ width: "12%" }}>Category</th>
+                      <th style={{ width: "50%" }}>Description</th>
+                     <th style={{ width: "6%" }}>Rating</th>
+                    </tr>
+                  </thead>
+                <tbody key={item.id}>
+                   <tr>
+                     <td>{item.volumeInfo.title}</td>
+                    <td>{item.volumeInfo.authors}</td>
+                       <td>{item.volumeInfo.categories}</td>
+                      <td>{item.volumeInfo.description}</td>
+                      <td>{item.volumeInfo.averageRating}</td>
+                   </tr>
+                   </tbody>
+                 </Table>
               </>
             );
           })}

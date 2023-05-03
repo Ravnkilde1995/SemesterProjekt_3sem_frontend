@@ -30,8 +30,9 @@ function App() {
             </Routes>
 
 
-            {/*<Home/>*/}
-            {/*<About/>*/}
+            {/* <Home/> */}
+            {/* <About/> */}
+            {/* <Libery/> */}
 
         </div>
     )

@@ -4,7 +4,7 @@ import Table from "react-bootstrap/Table";
 
 import "./library.css";
 
-function Libery() {
+function Library() {
     const [dataFromServer, setDataFromServer] = useState("Loading...");
     
     // Bog data gemmes på en liste med useState
@@ -64,4 +64,4 @@ function Libery() {
         </div>
       );
     }
-    export default Libery;
+    export default Library;

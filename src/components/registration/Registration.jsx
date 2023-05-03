@@ -24,4 +24,10 @@ const RegistrationForm = () => {
                   <label className="form__label" for="confirmPassword">Confirm Password </label>
                   <input className="form__input" type="password" id="confirmPassword" placeholder="Confirm Password"/>
               </div>
+              </div>
           </div>
+          )
+          ;
+}
+
+export default RegistrationForm;

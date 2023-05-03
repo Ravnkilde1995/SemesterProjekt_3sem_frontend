@@ -32,7 +32,7 @@ function App() {
 
             {/* <Home/> */}
             {/* <About/> */}
-            {/* <Libery/> */}
+            {/* <Library/> */}
 
         </div>
     )

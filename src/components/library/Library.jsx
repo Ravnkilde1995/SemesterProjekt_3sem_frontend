@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import facade from "../../apiFacade.js";
 import Table from "react-bootstrap/Table";
 
-import "./libary.css";
+import "./library.css";
 
 function Libery() {
     const [dataFromServer, setDataFromServer] = useState("Loading...");

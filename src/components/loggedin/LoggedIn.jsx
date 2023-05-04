@@ -5,7 +5,6 @@ function LoggedIn({user}){
     useEffect(() => { 
       const url = user.roles.split(',').includes('user') ? '/api/info/user' : '/api/info/admin';
       facade.fetchData(url).then(res => {
-        console.log(res);
         setDataFromServer(res.msg)});
     },[])
   

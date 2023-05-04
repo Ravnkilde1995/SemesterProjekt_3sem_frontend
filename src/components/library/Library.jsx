@@ -31,7 +31,7 @@ function Library() {
           {/*Vi mapper hvert item vi har fetchet */}
     
           {bookList.map((item) => {
-            console.log("hello hello", item);
+            //console.log("hello hello", item);
             //console.log("Nummer 2", item.id);
             //console.log("Nummer 3", item.etag);
     
@@ -48,6 +48,7 @@ function Library() {
                      <th style={{ width: "6%" }}>Rating</th>
                     </tr>
                   </thead>
+                  {/* der skal sættes en knap her så man kan vælge den bog */}
                 <tbody key={item.id}>
                    <tr>
                      <td>{item.volumeInfo.title}</td>
@@ -55,6 +56,7 @@ function Library() {
                        <td>{item.volumeInfo.categories}</td>
                       <td>{item.volumeInfo.description}</td>
                       <td>{item.volumeInfo.averageRating}</td>
+                      {/* dom manipulation getElementByID */}
                    </tr>
                    </tbody>
                  </Table>

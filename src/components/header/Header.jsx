@@ -26,15 +26,15 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
     }
 
     return (
-        <div className="Nav">
+        <div className="Nav" >
             <Navbar className="active">
-                <Container className="Nav">
-                    <a className="active" href="/"><img src="/vite.svg" height="78px" className="img-fill"
-                                                        alt=""></img>
+                <Container className="Nav" color="#003d76">
+                    <a className="active" href="/"><img src="/vite.svg" height="78px" className="img-fill" alt=""></img>
                     </a>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="Nav" fill="fill">
+
                             <a className="nav-item" href="/about">About</a>
                             <a className="nav-item" href="/contact">Contact</a>
                             <a className="nav-item" href="/library">Library</a>
@@ -43,7 +43,6 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
                         </Nav>
                         <Nav className="ms-auto">
 
-
                             {!loggedIn ? (<LogIn login={login}/>) :
                                 (<div className="login-container">
                                     <Badge bg="primary">
@@ -51,7 +50,6 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
                                     </Badge>
                                     <button onClick={logout}>Logout</button>
                                 </div>)}
-
 
                             {/*{!loggedIn ? (<LogIn login={login} />) :*/}
                             {/*    (<div>*/}

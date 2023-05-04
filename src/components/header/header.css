@@ -46,6 +46,7 @@ th, td {
 .dropdown-menu {
 }
 
+
 .Nav.Nav-right.dropdown:hover > .dropdown-menu {
     display: block;
 }

@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import facade from "./apiFacade";
 import LogIn from "./components/loginform/LoginForm.jsx";
 import LoggedIn from "./components/loggedin/LoggedIn.jsx";
 import Home from "./components/home/Home.jsx";
@@ -26,7 +25,6 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/about" element={<About/>}/>
-                <Route path="/contact" element={<Contact/>}/>
                 <Route path="/library" element={<Library/>}/>
                 <Route path="/bookshelf" element={<Bookshelf/>}/>
                 <Route path="/registration" element={<Registration/>}/>
@@ -36,9 +34,8 @@ function App() {
             </Routes>
 
 
-            {/* <Home/> */}
-            {/* <About/> */}
-            {/* <Library/> */}
+            {/*<Home/>*/}
+            {/*<About/>*/}
 
 
         </div>

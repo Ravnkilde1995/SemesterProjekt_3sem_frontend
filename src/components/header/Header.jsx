@@ -38,6 +38,8 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
                             <a className="nav-item" href="/about">About</a>
                             <a className="nav-item" href="/contact">Contact</a>
                             <a className="nav-item" href="/library">Library</a>
+                            <a className="nav-item" href="/bookshelf">Bookshelf</a>
+                            <a className="nav-item" href="/registration">Sign-up</a>
                         </Nav>
                         <Nav className="ms-auto">
 

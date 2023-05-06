@@ -13,11 +13,13 @@ th, td {
 }
 
 .login-container input[type=text]{
-    padding: 6px;
+    text-align-all: center;
+
+    padding: 6px 6px;
     margin-top: 8px;
     margin-right: 10px;
     font-size: 18px;
-    border: black;
+    border: black auto 1px;
     width: 180px; /* adjust as needed (as long as it doesn't break the topnav) */
 }
 
@@ -25,17 +27,20 @@ th, td {
 /* Style the button inside the input container */
 .login-container button {
     float: right;
-    padding: 6px;
-    margin-top: 8px;
-    margin-right: 16px;
+    padding: 10px 10px;
     background: #ddd;
-    font-size: 17px;
+    font-size: 18px;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+}
+
+.login-container:active{
+    overflow: hidden;
+    background-color: #003d76;
+    color: white;
 }
 
 .login-container button:hover {
-    background: #ccc;
+    background: #003d76;
+    color: white;
 }
 

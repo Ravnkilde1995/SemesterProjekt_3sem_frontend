@@ -11,7 +11,9 @@ th, td {
 
 .Nav {
     overflow: hidden;
-    background-color: #fcfcfc;
+    background-color: #ffffff;
+    outline-style: auto;
+    outline-color: #111111;
 }
 
 .Nav a {
@@ -19,10 +21,17 @@ th, td {
     color: #000000;
 
 }
+.Nav a.nav-icon {
+    justify-content: center;
+    text-align: center;
+    padding: 5px 5px;
+    font: inherit;
+    font-size: 18px;
+}
 .Nav a.nav-item {
     justify-content: center;
     text-align: center;
-    padding: 25.5px 20px;
+    padding: 30px 20px;
     text-decoration: none;
     font: inherit;
     font-size: 18px;
@@ -41,6 +50,10 @@ th, td {
 
 .Nav-right {
     float: right;
+    padding: 18px 18px;
+    justify-content: center;
+    outline-style: auto;
+    outline-color: #111111;
 }
 
 .dropdown-menu {

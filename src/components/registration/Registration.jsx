@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./registration.css";
 
 const Registration = () => {
@@ -84,7 +84,7 @@ const Registration = () => {
         </div>
       </div>
       <div class="footer">
-        <button onClick={() => handleSubmit()} type="submit" class="btn">
+        <button onClick={() => handleSubmit()} type="submit" class="btn btn-primary">
           Register
         </button>
       </div>

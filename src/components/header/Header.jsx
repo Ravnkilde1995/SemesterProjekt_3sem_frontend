@@ -26,56 +26,86 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
     }
 
     return (
-        <div className="Nav" >
-            <Navbar className="active">
-                <Container className="Nav" color="#003d76">
-                    <a className="active" href="/"><img src="/vite.svg" height="78px" className="img-fill" alt=""></img>
-                    </a>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="Nav" fill="fill">
+        <div className="container-fluid flex-fill">
+            <nav className="Nav">
+                <a className="nav-icon active" href="/"><img src="/img.png" height="77px" alt=""></img>
+                </a>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"/>
+                </button>
+                <a className="nav-item nav-link" href="/about">About</a>
+                <a className="nav-item nav-link" href="/contact">Contact</a>
 
-                            <a className="nav-item" href="/about">About</a>
-                            <a className="nav-item" href="/contact">Contact</a>
-                            <a className="nav-item" href="/library">Library</a>
-                            <a className="nav-item" href="/bookshelf">Bookshelf</a>
-                            <a className="nav-item" href="/registration">Sign-up</a>
-                        </Nav>
-                        <Nav className="ms-auto">
+                <a className="nav-item nav-link" href="/library">Library</a>
+                <a className="nav-item nav-link" href="/bookshelf">Bookshelf</a>
+                <a className="nav-item nav-link" href="/registration">Sign-up</a>
 
-                            {!loggedIn ? (<LogIn login={login}/>) :
-                                (<div className="login-container">
-                                    <Badge bg="primary">
-                                        <LoggedIn user={user}/>
-                                    </Badge>
-                                    <button onClick={logout}>Logout</button>
-                                </div>)}
+                <div className="Nav-right">
+                    {!loggedIn ? (<LogIn login={login}/>) :
+                        (<div className="login-container">
+                            <button type="button" className="btn btn-primary">
+                                <LoggedIn user={user}/>
+                            </button>
+                            {/*<Badge bg="primary" >*/}
+                            {/*    <LoggedIn user={user}/>*/}
+                            {/*</Badge>*/}
+                            <button type="button" className="btn btn-primary" onClick={logout}>Logout</button>
+                        </div>)}
+                </div>
 
-                            {/*{!loggedIn ? (<LogIn login={login} />) :*/}
-                            {/*    (<div>*/}
-                            {/*        <LoggedIn user={user} />*/}
-                            {/*        <button onClick={logout}>Logout</button>*/}
-                            {/*    </div>)}*/}
-
-                            {/*<NavDropdown title="Dropdown" id="basic-nav-dropdown">*/}
-                            {/*    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>*/}
-                            {/*    <NavDropdown.Item href="#action/3.2">*/}
-                            {/*        Another action*/}
-                            {/*    </NavDropdown.Item>*/}
-                            {/*    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>*/}
-                            {/*    <NavDropdown.Divider/>*/}
-                            {/*    <NavDropdown.Item href="#action/3.4">*/}
-                            {/*        Separated link*/}
-                            {/*    </NavDropdown.Item>*/}
-                            {/*</NavDropdown>*/}
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-
+            </nav>
         </div>
-    )
-        ;
+        // <div className="Nav" >
+        //     <Navbar className="active">
+        //         <Container className="Nav" color="#003d76">
+        //             <a className="active" href="/"><img src="/vite.svg" height="78px" className="img-fill" alt=""></img>
+        //             </a>
+        //             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+        //             <Navbar.Collapse id="basic-navbar-nav">
+        //                 <Nav className="Nav" fill="fill">
+        //
+        //                     <a className="nav-item" href="/about">About</a>
+        //                     <a className="nav-item" href="/contact">Contact</a>
+        //                     <a className="nav-item" href="/library">Library</a>
+        //                     <a className="nav-item" href="/bookshelf">Bookshelf</a>
+        //                     <a className="nav-item" href="/registration">Sign-up</a>
+        //                 </Nav>
+        //                 <Nav className="ms-auto">
+        //
+        //                     {!loggedIn ? (<LogIn login={login}/>) :
+        //                         (<div className="login-container">
+        //                             <Badge bg="primary">
+        //                                 <LoggedIn user={user}/>
+        //                             </Badge>
+        //                             <button onClick={logout}>Logout</button>
+        //                         </div>)}
+        //
+        //                     {/*{!loggedIn ? (<LogIn login={login} />) :*/}
+        //                     {/*    (<div>*/}
+        //                     {/*        <LoggedIn user={user} />*/}
+        //                     {/*        <button onClick={logout}>Logout</button>*/}
+        //                     {/*    </div>)}*/}
+        //
+        //                     {/*<NavDropdown title="Dropdown" id="basic-nav-dropdown">*/}
+        //                     {/*    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>*/}
+        //                     {/*    <NavDropdown.Item href="#action/3.2">*/}
+        //                     {/*        Another action*/}
+        //                     {/*    </NavDropdown.Item>*/}
+        //                     {/*    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>*/}
+        //                     {/*    <NavDropdown.Divider/>*/}
+        //                     {/*    <NavDropdown.Item href="#action/3.4">*/}
+        //                     {/*        Separated link*/}
+        //                     {/*    </NavDropdown.Item>*/}
+        //                     {/*</NavDropdown>*/}
+        //                 </Nav>
+        //             </Navbar.Collapse>
+        //         </Container>
+        //     </Navbar>
+        //
+        // </div>
+    );
 }
 
 export default Header;

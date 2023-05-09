@@ -7,7 +7,7 @@ import {BrowserRouter, BrowserRouter as Router} from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="sys-project">
       <App apiFacade={apiFacade} />
     </BrowserRouter>
   </React.StrictMode>

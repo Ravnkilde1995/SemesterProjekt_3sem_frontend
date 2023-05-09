@@ -1,4 +1,5 @@
-const URL = "https://chriswihudat.dk/tomcat/dat3_semesterProjek/";
+// const URL = "https://chriswihudat.dk/tomcat/dat3_semesterProjek/";
+const URL = "http://localhost:8080";
 
 // Denne streng burde nok gemmes væk
 const GoogleURL = "https://www.googleapis.com/books/v1/volumes?q=:keyes&key=AIzaSyCZoXruFbr28UKR2Z6HXgtXqnpRA0shUTk"

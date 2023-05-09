@@ -7,7 +7,7 @@ const Registration = () => {
   const [confirmPassword, setConfirmPassword] = useState(null);
   const user = {};
   (user.username = username), (user.password = password);
-  console.log(user);
+  //console.log(user);
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -24,7 +24,7 @@ const Registration = () => {
 
   const handleSubmit = () => {
     // fetch til
-    const url = "http://localhost:8080/api/info";
+    const url = "http://localhost:8080/api/user";
     const options = {
       method: "POST",
       headers: {

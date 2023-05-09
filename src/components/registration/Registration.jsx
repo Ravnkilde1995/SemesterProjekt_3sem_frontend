@@ -24,7 +24,7 @@ const Registration = () => {
 
   const handleSubmit = () => {
     // fetch til
-    const url = "http://localhost:8080/api/user";
+    const url = "https://chriswihudat.dk/tomcat/dat3_semesterProjek/api/user";
     const options = {
       method: "POST",
       headers: {

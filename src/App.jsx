@@ -17,6 +17,12 @@ function App() {
     const [loggedIn, setLoggedIn] = useState(apiFacade.loggedIn());
     const [user, setUser] = useState({username: "", roles: ""});
 
+    // useEffect(() => {
+    //     const token = apiFacade.getToken();
+    //     if (!token) {
+    //         return false;
+    //     }
+    // })
 
     return (
         <div>

@@ -4,6 +4,7 @@ import Table from "react-bootstrap/Table";
 
 import "./library.css";
 import Button from "react-bootstrap/Button";
+// import addToShelf from "../../actions/AddToShelf.js";
 
 function Library() {
     const [dataFromServer, setDataFromServer] = useState("Loading...");
@@ -39,29 +40,29 @@ function Library() {
                 return (
                     <>
                         <br/>
-                        <Table bordered hover>
-                            <thead>
-                            <tr>
-                                <th style={{width: "20%"}}>Title</th>
-                                <th style={{width: "12%"}}>Author</th>
-                                <th style={{width: "12%"}}>Category</th>
-                                <th style={{width: "44%"}}>Description</th>
-                                <th style={{width: "6%"}}>Rating</th>
-                                <th style={{width: "6%"}}>Download</th>
-                            </tr>
-                            </thead>
-                            <tbody key={item.id}>
-                            <tr>
-                                <td>{item.volumeInfo.title}</td>
-                                <td>{item.volumeInfo.authors}</td>
-                                <td>{item.volumeInfo.categories}</td>
-                                <td>{item.volumeInfo.description}</td>
-                                <td>{item.volumeInfo.averageRating}</td>
-                                <td><Button className="btn btn-primary" formAction="AddToShelf">Download</Button> </td>
 
-                            </tr>
-                            </tbody>
-                        </Table>
+                            <Table className="table table-info" bordered hover>
+                                <thead>
+                                <tr>
+                                    <th style={{width: "20%"}}>Title</th>
+                                    <th style={{width: "12%"}}>Author</th>
+                                    <th style={{width: "9%"}}>Category</th>
+                                    <th style={{width: "44%"}}>Description</th>
+                                    <th style={{width: "6%"}}>Rating</th>
+                                    <th style={{width: "9%"}}>Add to Shelf</th>
+                                </tr>
+                                </thead>
+                                <tbody key={item.id}>
+                                <tr>
+                                    <td>{item.volumeInfo.title}</td>
+                                    <td>{item.volumeInfo.authors}</td>
+                                    <td>{item.volumeInfo.categories}</td>
+                                    <td>{item.volumeInfo.description}</td>
+                                    <td>{item.volumeInfo.averageRating}</td>
+                                    <td><Button className="btn btn-primary" formAction="addToShelf" name="book_id">Add to Bookshelf</Button></td>
+                                </tr>
+                                </tbody>
+                            </Table>
                     </>
                 );
             })}

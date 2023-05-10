@@ -6,9 +6,12 @@ import apiFacade from "./apiFacade";
 import {BrowserRouter, BrowserRouter as Router} from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter basename="sys-project">
-      <App apiFacade={apiFacade} />
-    </BrowserRouter>
-  </React.StrictMode>
+    <React.StrictMode>
+        {/*<BrowserRouter basename="sys-project">*/}
+        {/*    <App apiFacade={apiFacade} />*/}
+        {/*</BrowserRouter>*/}
+        <BrowserRouter>
+            <App apiFacade={apiFacade}/>
+        </BrowserRouter>
+    </React.StrictMode>
 );

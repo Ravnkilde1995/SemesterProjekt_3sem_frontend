@@ -27,7 +27,7 @@ function Library() {
   
 
   const addBook = (title, author, description) => {
-    const username = localStorage.getItem("username");
+    // const username = localStorage.getItem("username");
     // const url =
     //   "https://chriswihudat.dk/tomcat/dat3_semesterProjek/api/bookshelf";
     const url = "http://localhost:8080/api/bookshelf";

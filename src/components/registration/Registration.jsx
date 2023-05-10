@@ -13,7 +13,7 @@ const Registration = () => {
     const { id, value } = e.target;
     if (id === "username") {
       setUsername(value);
-      localStorage.setItem("username", value);
+      // localStorage.setItem("username", value);
     }
     if (id === "password") {
       setPassword(value);

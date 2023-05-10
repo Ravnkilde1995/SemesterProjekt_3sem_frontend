@@ -52,54 +52,55 @@ function Library() {
   };
 
   return (
-    <div>
-      <br></br>
-      <h1>Books fetched from google</h1>
-      <h3>{dataFromServer}</h3>
+      <div>
+        <br></br>
+        <h1>Books fetched from google</h1>
+        <h3>{dataFromServer}</h3>
 
-      {/*Vi mapper hvert item vi har fetchet */}
+        {/*Vi mapper hvert item vi har fetchet */}
 
-      {bookList.map((item) => {
-        console.log("hello hello", item);
-        //console.log("Nummer 2", item.id);
-        //console.log("Nummer 3", item.etag);
+        {bookList.map((item) => {
+          console.log("hello hello", item);
+          //console.log("Nummer 2", item.id);
+          //console.log("Nummer 3", item.etag);
 
-        return (
-          <>
-            <br />
+          return (
+              <>
+                <br/>
 
-            <Table className="table table-info" bordered hover>
-              <thead>
-                <tr>
-                  <th style={{ width: "20%" }}>Title</th>
-                  <th style={{ width: "12%" }}>Author</th>
-                  <th style={{ width: "9%" }}>Category</th>
-                  <th style={{ width: "44%" }}>Description</th>
-                  <th style={{ width: "6%" }}>Rating</th>
-                  <th style={{ width: "9%" }}>Add to Shelf</th>
-                </tr>
-              </thead>
-              <tbody key={item.id}>
-                <tr>
-                  <td>{item.volumeInfo.title}</td>
-                  <td>{item.volumeInfo.authors}</td>
-                  <td>{item.volumeInfo.categories}</td>
-                  <td>{item.volumeInfo.description}</td>
-                  <td>{item.volumeInfo.averageRating}</td>
-                  <td>
-                    {/* der skal nok tilføjes en user hertil */}
-                    <Button onClick={() => addBook(item.volumeInfo.title, item.volumeInfo.authors, item.volumeInfo.description)}
-                      className="btn btn-primary">
-                      Add to Bookshelf
-                    </Button>
-                  </td>
-                </tr>
-              </tbody>
-            </Table>
-          </>
-        );
-      })}
-    </div>
+                <Table className="table table-info" bordered hover>
+                  <thead>
+                  <tr>
+                    <th style={{width: "20%"}}>Title</th>
+                    <th style={{width: "12%"}}>Author</th>
+                    <th style={{width: "9%"}}>Category</th>
+                    <th style={{width: "44%"}}>Description</th>
+                    <th style={{width: "6%"}}>Rating</th>
+                    <th style={{width: "9%"}}>Add to Shelf</th>
+                  </tr>
+                  </thead>
+                  <tbody key={item.id}>
+                  <tr>
+                    <td>{item.volumeInfo.title}</td>
+                    <td>{item.volumeInfo.authors}</td>
+                    <td>{item.volumeInfo.categories}</td>
+                    <td>{item.volumeInfo.description}</td>
+                    <td>{item.volumeInfo.averageRating}</td>
+                    <td>
+                      {/* der skal nok tilføjes en user hertil */}
+                      <Button
+                          onClick={() => addBook(item.volumeInfo.title, item.volumeInfo.authors, item.volumeInfo.description)}
+                          className="btn btn-primary">
+                        Add to Bookshelf
+                      </Button>
+                    </td>
+                  </tr>
+                  </tbody>
+                </Table>
+              </>
+          );
+        })}
+      </div>
   );
 }
 

@@ -26,7 +26,7 @@ const Bookshelf = () => {
     return (
         <div>
             <br></br>
-            <h1>Books in your Library</h1>
+            <h1>Books in your bookshelf</h1>
 
             {/*Vi mapper hvert item vi har fetchet */}
 

@@ -1,3 +1,5 @@
+import review from "./components/review/Review.jsx";
+
 const URL = "http://localhost:8080";
 
 // Denne streng burde nok gemmes væk
@@ -49,6 +51,15 @@ function apiFacade() {
         }
         return opts;
     }
+
+    // const addReview = (review) => {
+    //     const options = makeOptions("POST", true, review);
+    //     return fetch(URL + "/api/review", options)
+    //         .then(handleHttpErrors)
+    //         .then(res => {
+    //             console.log(res);
+    //         })
+    // }
     const setToken = (token) => {
         localStorage.setItem('jwtToken', token)
     }
@@ -77,6 +88,16 @@ function apiFacade() {
         return JSON.parse(jsonPayload);
     }
 
+    function review(bookshelfId, reviewScore, reviewText)
+    {
+        const options = makeOptions("POST", true, {bookshelfId, reviewScore, reviewText});
+        return fetch(URL + "/api/review", options)
+            .then(handleHttpErrors)
+            .then(res => {
+                console.log(res);
+            })
+    }
+
     return {
         makeOptions,
         setToken,
@@ -87,6 +108,10 @@ function apiFacade() {
         fetchData,
         fetchDataGoogle,
         readJwtToken,
+
+        review(bookshelfId, reviewScore, reviewText) {
+
+        }
     }
 }
 

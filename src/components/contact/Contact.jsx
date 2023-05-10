@@ -2,6 +2,8 @@ import React from "react";
 import "./contact.css";
 
 const Contact = () => {
+
+    // test
     return (
         <div>
             <div className="jumbotron">

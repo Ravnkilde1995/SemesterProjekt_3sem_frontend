@@ -24,22 +24,24 @@ function Library() {
         });
     }, []);
 
-    const addToShelf = async (evt) => {
-        evt.preventDefault();
-        const object = {
-            bookId: evt.target.name,
-            userId: facade.readJwtToken(facade.getToken()).username
-        }
-        await fetch("http://localhost:8080/api/bookshelf/add", facade.makeOptions("POST", facade.getToken(), object))
-    }
+    // bruges ikke mere så må gerne slettes
+    // const addToShelf = async (evt) => {
+    //     evt.preventDefault();
+    //     const object = {
+    //         bookId: evt.target.name,
+    //         userId: facade.readJwtToken(facade.getToken()).username
+    //     }
+    //     await fetch("http://localhost:8080/api/bookshelf/add", facade.makeOptions("POST", facade.getToken(), object))
+    // }
 
     const book = {};
 
     //TODO Merge addToShelf and addBook functions together
 
     const addBook = (title, author, description) => {
-        //const username = localStorage.getItem("username");
-        // const url =
+      const username = facade.readJwtToken(facade.getToken()).username
+        
+      // const url =
         //   "https://chriswihudat.dk/tomcat/dat3_semesterProjek/api/bookshelf";
         const url = "http://localhost:8080/api/bookshelf";
         book.user_name = username;

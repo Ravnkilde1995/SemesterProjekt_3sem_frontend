@@ -1,6 +1,11 @@
 // vite.config.js
-import { defineConfig } from "file:///C:/Users/chris/WebstormProjects/SemesterProjekt_3sem_frontend/node_modules/vite/dist/node/index.js";
-import react from "file:///C:/Users/chris/WebstormProjects/SemesterProjekt_3sem_frontend/node_modules/@vitejs/plugin-react/dist/index.mjs";
+//import { defineConfig } from "file:///C:/Users/chris/WebstormProjects/SemesterProjekt_3sem_frontend/node_modules/vite/dist/node/index.js";
+//import react from "file:///C:/Users/chris/WebstormProjects/SemesterProjekt_3sem_frontend/node_modules/@vitejs/plugin-react/dist/index.mjs";
+
+
+import { defineConfig } from "file:///C:\Users\Ravnk\OneDrive\Skrivebord\SemesterProjekt_3sem_frontend\node_modules\vite\dist\node\index.js";
+import react from "file:///C:\Users\Ravnk\OneDrive\Skrivebord\SemesterProjekt_3sem_frontend/node_modules/@vitejs/plugin-react/dist/index.mjs";
+
 var vite_config_default = defineConfig({
   plugins: [react()]
 });

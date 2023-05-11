@@ -12,11 +12,6 @@ import {Badge} from "react-bootstrap";
 
 const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
 
-    const logout = () => {
-        facade.logout();
-        setLoggedIn(false);
-        setUser({name: "", roles: ""})
-    }
     const login = (user, pass) => {
         facade.login(user, pass).then(() => {
             const token = facade.readJwtToken(facade.getToken());
@@ -25,6 +20,14 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
         });
     }
 
+    const logout = () => {
+        facade.logout();
+        setLoggedIn(false);
+        setUser({name: "", roles: ""})
+    }
+
+//forsøg på at optimere Navbar, ikke indholdet i den, men selve dens flow og opbygning af forskellige klasser og sider,
+// som den skal navigere imellem
     return (
         <div className="container-fluid flex-fill">
             <nav className="Nav">
@@ -57,6 +60,9 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
 
             </nav>
         </div>
+
+        //Gammel Navbar, ikke slettet, just in case!!!
+
         // <div className="Nav" >
         //     <Navbar className="active">
         //         <Container className="Nav" color="#003d76">

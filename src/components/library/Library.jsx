@@ -23,6 +23,15 @@ function Library() {
         });
     }, []);
 
+    const addToShelf = async (evt) => {
+        evt.preventDefault();
+        const object = {
+            bookId: evt.target.name,
+            userId: facade.readJwtToken(facade.getToken()).username
+        }
+        await fetch("http://localhost:8080/api/bookshelf/add", facade.makeOptions("POST", facade.getToken(), object) )
+    }
+
 
     return (
         <div>
@@ -59,7 +68,7 @@ function Library() {
                                     <td>{item.volumeInfo.categories}</td>
                                     <td>{item.volumeInfo.description}</td>
                                     <td>{item.volumeInfo.averageRating}</td>
-                                    <td><Button className="btn btn-primary" formAction="addToShelf" name="book_id">Add to Bookshelf</Button></td>
+                                    <td><Button className="btn btn-primary" formAction="addToShelf" name={item.id}>Add to Bookshelf</Button></td>
                                 </tr>
                                 </tbody>
                             </Table>

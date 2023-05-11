@@ -12,11 +12,6 @@ import {Badge} from "react-bootstrap";
 
 const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
 
-    const logout = () => {
-        facade.logout();
-        setLoggedIn(false);
-        setUser({name: "", roles: ""})
-    }
     const login = (user, pass) => {
         facade.login(user, pass).then(() => {
             const token = facade.readJwtToken(facade.getToken());
@@ -24,6 +19,13 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
             setLoggedIn(true);
         });
     }
+
+    const logout = () => {
+        facade.logout();
+        setLoggedIn(false);
+        setUser({name: "", roles: ""})
+    }
+
 //forsøg på at optimere Navbar, ikke indholdet i den, men selve dens flow og opbygning af forskellige klasser og sider,
 // som den skal navigere imellem
     return (

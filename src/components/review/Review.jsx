@@ -4,6 +4,7 @@ import facade from "../../apiFacade.js";
 function Review() {
 
     const [bookshelfId, setBookshelfId] = useState(0);
+    const [bookId, setBookId] = useState(0);
     const [reviewScore, setReviewScore] = useState();
     const [reviewText, setReviewText] = useState("");
 
@@ -24,7 +25,7 @@ function Review() {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        facade.review(bookshelfId, reviewScore, reviewText);
+        facade.review(bookshelfId, bookId, reviewScore, reviewText);
         console.log("Review submitted");
     }
 

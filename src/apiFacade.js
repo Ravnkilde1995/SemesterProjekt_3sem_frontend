@@ -88,7 +88,7 @@ function apiFacade() {
         return JSON.parse(jsonPayload);
     }
 
-    function review(bookshelfId, reviewScore, reviewText)
+    function review(bookshelfId, bookId, reviewScore, reviewText)
     {
         const options = makeOptions("POST", true, {bookshelfId, reviewScore, reviewText});
         return fetch(URL + "/api/review", options)
@@ -109,7 +109,7 @@ function apiFacade() {
         fetchDataGoogle,
         readJwtToken,
 
-        review(bookshelfId, reviewScore, reviewText) {
+        review(bookshelfId, bookId, reviewScore, reviewText) {
 
         }
     }

@@ -7,6 +7,7 @@ import facade from "../apiFacade.js";
 
 export default function ReviewForm() {
     const [bookshelf, setBookshelf] = useState(0);
+    const [bookId , setBookId] = useState(0);
     const [star, setStar] = useState();
     const [reviewText, setReviewText] = useState("");
     const onChange = (e) => {

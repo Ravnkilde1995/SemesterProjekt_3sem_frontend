@@ -38,7 +38,7 @@ function Library() {
     //TODO Merge addToShelf and addBook functions together
 
     const addBook = (title, author, description) => {
-        const username = localStorage.getItem("username");
+        //const username = localStorage.getItem("username");
         // const url =
         //   "https://chriswihudat.dk/tomcat/dat3_semesterProjek/api/bookshelf";
         const url = "http://localhost:8080/api/bookshelf";
@@ -46,7 +46,6 @@ function Library() {
         book.title = title;
         book.author = author.toString();
         book.description = description;
-        console.log(username + "hej hej med dig");
         const options = {
             method: "POST",
             headers: {
@@ -57,7 +56,7 @@ function Library() {
         };
 
         fetch(url, options).then((res) => {
-            console.log(res);
+            //console.log(res);
             return res.json();
         });
     };
@@ -72,7 +71,7 @@ function Library() {
             {/*Vi mapper hvert item vi har fetchet */}
 
             {bookList.map((item) => {
-                console.log("hello hello", item);
+                //console.log("hello hello", item);
                 //console.log("Nummer 2", item.id);
                 //console.log("Nummer 3", item.etag);
 

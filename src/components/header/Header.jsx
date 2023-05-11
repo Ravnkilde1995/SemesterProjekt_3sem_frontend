@@ -1,13 +1,13 @@
 import React from "react";
 import "./header.css";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+// import Container from 'react-bootstrap/Container';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
 
 import LoggedIn from "../loggedin/LoggedIn.jsx";
 import facade from "../../apiFacade.js";
 import LogIn from "../loginform/LoginForm.jsx";
-import {Badge} from "react-bootstrap";
+// import {Badge} from "react-bootstrap";
 
 
 const Header = ({loggedIn, setLoggedIn, user, setUser}) => {

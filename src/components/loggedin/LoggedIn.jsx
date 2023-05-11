@@ -14,7 +14,7 @@ function LoggedIn({user}){
   
     return (
       <div>
-        <label>{facade.readJwtToken(facade.getToken()).username}</label>
+        <label>Hello, {facade.readJwtToken(facade.getToken()).username}</label>
         {/*<h4>{user.username} with roles: {user.roles}</h4>*/}
       </div>
     )

@@ -35,14 +35,18 @@ function Library() {
 
     const book = {};
 
+    // const bookshelf = facade.bookshelf()
+
     //TODO Merge addToShelf and addBook functions together
 
-    const addBook = (title, author, description) => {
-        const username = localStorage.getItem("username");
-        // const url =
-        //   "https://chriswihudat.dk/tomcat/dat3_semesterProjek/api/bookshelf";
+    const addBook = (username, bookId, title, author, description) => {
+        // const username = facade.readJwtToken(facade.getToken()).username;
+        // // const url =
+        // //   "https://chriswihudat.dk/tomcat/dat3_semesterProjek/api/bookshelf";
+        // const bookId = bookList.item.volumeInfo.bookId;
         const url = "http://localhost:8080/api/bookshelf";
         book.user_name = username;
+        book.book_id = bookId;
         book.title = title;
         book.author = author.toString();
         book.description = description;
@@ -101,7 +105,7 @@ function Library() {
 
 
                                 <td><Button
-                                    onClick={() => addBook(item.volumeInfo.title, item.volumeInfo.authors, item.volumeInfo.description)}
+                                    onClick={() => addBook(facade.readJwtToken(facade.getToken()).username, item.id, item.volumeInfo.title, item.volumeInfo.authors, item.volumeInfo.description)}
                                     className="btn btn-primary">
                                     Add to Bookshelf
                                 </Button>

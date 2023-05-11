@@ -32,8 +32,8 @@ function apiFacade() {
 
     const fetchDataGoogle = () => {
         const options = makeOptions("GET");
-       return fetch(GoogleURL, options).then(handleHttpErrors);
-      }
+        return fetch(GoogleURL, options).then(handleHttpErrors);
+    }
 
     const makeOptions = (method, addToken, body) => {
         var opts = {
@@ -88,10 +88,18 @@ function apiFacade() {
         return JSON.parse(jsonPayload);
     }
 
-    function review(bookshelfId, bookId, reviewScore, reviewText)
-    {
+    function review(bookshelfId, bookId, reviewScore, reviewText) {
         const options = makeOptions("POST", true, {bookshelfId, reviewScore, reviewText});
         return fetch(URL + "/api/review", options)
+            .then(handleHttpErrors)
+            .then(res => {
+                console.log(res);
+            })
+    }
+
+    function bookshelf(username, bookId, author, title, description) {
+        const options = makeOptions("POST", true, {username, bookId, author, title, description});
+        return fetch(URL + "/api/bookshelf", options)
             .then(handleHttpErrors)
             .then(res => {
                 console.log(res);
@@ -111,6 +119,9 @@ function apiFacade() {
 
         review(bookshelfId, bookId, reviewScore, reviewText) {
 
+        },
+
+        bookshelf(username, bookId, author, title, description) {
         }
     }
 }

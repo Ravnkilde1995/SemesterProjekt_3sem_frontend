@@ -1,6 +1,7 @@
 import review from "./components/review/Review.jsx";
 
 const URL = "http://localhost:8080";
+const URLBookshelf = "http://localhost:8080/api/bookshelf/";
 
 // Denne streng burde nok gemmes væk
 const GoogleURL = "https://www.googleapis.com/books/v1/volumes?q=:keyes&key=AIzaSyCZoXruFbr28UKR2Z6HXgtXqnpRA0shUTk"
@@ -28,6 +29,10 @@ function apiFacade() {
     const fetchData = (ressource) => {
         const options = makeOptions("GET", true); //True add's the token
         return fetch(URL + ressource, options).then(handleHttpErrors);
+    }
+    const fetchBookshelfData = (user_name) => {
+        const options = makeOptions("GET", true); //True add's the token
+        return fetch(URLBookshelf + user_name, options).then(handleHttpErrors);
     }
 
     const fetchDataGoogle = () => {
@@ -108,6 +113,7 @@ function apiFacade() {
         fetchData,
         fetchDataGoogle,
         readJwtToken,
+        fetchBookshelfData,
 
         review(bookshelfId, bookId, reviewScore, reviewText) {
 

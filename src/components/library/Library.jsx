@@ -38,7 +38,7 @@ function Library() {
 
     //TODO Merge addToShelf and addBook functions together
 
-    const addBook = (title, author, description) => {
+    const addBook = (title, author, description, id) => {
       const username = facade.readJwtToken(facade.getToken()).username
         
       // const url =
@@ -48,6 +48,9 @@ function Library() {
         book.title = title;
         book.author = author.toString();
         book.description = description;
+        book.google_id = id;
+        console.log("her" + id);
+        console.log("herher" + book);
         const options = {
             method: "POST",
             headers: {
@@ -73,7 +76,7 @@ function Library() {
             {/*Vi mapper hvert item vi har fetchet */}
 
             {bookList.map((item) => {
-                console.log("hello hello", item);
+                //console.log("hello hello", item);
                 //console.log("Nummer 2", item.id);
                 //console.log("Nummer 3", item.etag);
 
@@ -102,7 +105,7 @@ function Library() {
 
 
                                 <td><Button
-                                    onClick={() => addBook(item.volumeInfo.title, item.volumeInfo.authors, item.volumeInfo.description)}
+                                    onClick={() => addBook(item.volumeInfo.title, item.volumeInfo.authors, item.volumeInfo.description, item.id)}
                                     className="btn btn-primary">
                                     Add to Bookshelf
                                 </Button>

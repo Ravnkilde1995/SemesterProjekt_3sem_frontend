@@ -69,7 +69,7 @@ const Bookshelf = () => {
                                     {/* der skal nok tilføjes en user hertil */}
                                     <Button
                                         //TODO Method to send to review page
-                                        //onClick={() => addBook(item.volumeInfo.title, item.volumeInfo.authors, item.volumeInfo.description)}
+                                        //onClick={() => addReview(review_text, )}
                                         className="btn btn-primary">
                                         Review Book
                                     </Button>

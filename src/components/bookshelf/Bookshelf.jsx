@@ -13,10 +13,12 @@ const Bookshelf = () => {
         facade.fetchBookshelfData(facade.readJwtToken(facade.getToken()).username).then((res) => {
             //Hvis fetch respsonse har data, tilføjes det til bookList med setBookList
 
-            if (res.items) {
-                setBookList(res.items);
+            if (res) {
+                setBookList(res);
+                console.log(res)
             }
             setDataFromServer(res.msg);
+            // console.log(res.items)
         });
     }, []);
 
@@ -29,7 +31,7 @@ const Bookshelf = () => {
             {/*Vi mapper hvert item vi har fetchet */}
 
             {bookList.map((item) => {
-                console.log("hello hello", item);
+                //console.log("hello hello", items);
                 //console.log("Nummer 2", item.id);
                 //console.log("Nummer 3", item.etag);
 
@@ -50,7 +52,7 @@ const Bookshelf = () => {
                             </thead>
                             <tbody key={item.id}>
                             <tr>
-                                <td>{title}</td>
+                                <td>{item.title}</td>
                                 <td>{item.author}</td>
                                 {/*<td>{item.category}</td>*/}
                                 <td>{item.description}</td>

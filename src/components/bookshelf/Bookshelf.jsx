@@ -6,10 +6,8 @@ import facade from "../../apiFacade.js";
 
 const Bookshelf = () => {
     const [dataFromServer, setDataFromServer] = useState("Loading...");
-
     // Bog data gemmes på en liste med useState
     const [bookList, setBookList] = useState([]);
-    //const username = facade.readJwtToken(facade.getToken()).username
 
     useEffect(() => {
         facade.fetchBookshelfData(facade.readJwtToken(facade.getToken()).username).then((res) => {
@@ -18,7 +16,6 @@ const Bookshelf = () => {
             if (res.items) {
                 setBookList(res.items);
             }
-            //console.log("I useEffect ", bookList);
             setDataFromServer(res.msg);
         });
     }, []);
@@ -27,11 +24,12 @@ const Bookshelf = () => {
         <div>
             <br></br>
             <h1>Books in your bookshelf</h1>
+            <h3>{dataFromServer}</h3>
 
             {/*Vi mapper hvert item vi har fetchet */}
 
             {bookList.map((item) => {
-                //console.log("hello hello", item);
+                console.log("hello hello", item);
                 //console.log("Nummer 2", item.id);
                 //console.log("Nummer 3", item.etag);
 

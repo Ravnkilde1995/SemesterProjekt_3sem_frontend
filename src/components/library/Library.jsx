@@ -73,7 +73,7 @@ function Library() {
             {/*Vi mapper hvert item vi har fetchet */}
 
             {bookList.map((item) => {
-                //console.log("hello hello", item);
+                console.log("hello hello", item);
                 //console.log("Nummer 2", item.id);
                 //console.log("Nummer 3", item.etag);
 

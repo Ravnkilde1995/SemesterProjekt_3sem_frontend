@@ -1,4 +1,4 @@
-import React, { useState, setState } from "react";
+import React, { useState } from "react";
 import "./registration.css";
 
 const Registration = () => {
@@ -19,6 +19,7 @@ const Registration = () => {
       setPassword(value);
     }
     if (id === "confirmPassword") {
+
       setConfirmPassword(value);
     }
   };
@@ -47,7 +48,7 @@ const Registration = () => {
     <div className="form">
       <div className="form-body">
         <div className="username">
-          <label className="form__label" for="username">
+          <label className="form__label" htmlFor="username">
             Username{" "}
           </label>
           <input
@@ -86,8 +87,8 @@ const Registration = () => {
           />
         </div>
       </div>
-      <div class="footer">
-        <button onClick={() => handleSubmit()} type="submit" class="btn">
+      <div className="footer">
+        <button onClick={() => handleSubmit()} type="submit" className="btn">
           Register
         </button>
       </div>

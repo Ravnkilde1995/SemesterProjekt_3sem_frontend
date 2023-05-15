@@ -31,7 +31,7 @@ function apiFacade() {
         return fetch(URL + ressource, options).then(handleHttpErrors);
     }
     const fetchBookshelfData = (user_name) => {
-        const options = makeOptions("GET", true); //True add's the token
+        const options = makeOptions("GET"); //True add's the token
         console.log("URL: " + URLBookshelf + user_name);
         return fetch(URLBookshelf + user_name, options).then(handleHttpErrors);
     }

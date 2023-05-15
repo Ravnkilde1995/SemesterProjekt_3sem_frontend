@@ -31,8 +31,8 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
     return (
         <div className="container-fluid flex-fill">
             <nav className="Nav">
-                <a className="nav-icon active" href="/"><img src="/img.png" height="77px" alt=""></img>
-                </a>
+                {/*Ikon i venstre hjørne, som fører til forsiden*/}
+                <a className="nav-icon active" href="/"><img src="/img.png" height="77px" alt=""></img></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -41,11 +41,24 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
                 <a className="nav-item nav-link" href="/about">About</a>
                 <a className="nav-item nav-link" href="/contact">Contact</a>
 
-                <a className="nav-item nav-link" href="/library">Library</a>
-                <a className="nav-item nav-link" href="/bookshelf">Bookshelf</a>
-                <a className="nav-item nav-link" href="/registration">Sign-up</a>
+                {/*Navbar links, der kun vises når man er logget ind i Applikationen*/}
+                {facade.loggedIn()
+                    && <a className="nav-item nav-link" href="/library">Library</a>}
+                {facade.loggedIn()
+                    && <a className="nav-item nav-link" href="/bookshelf">Bookshelf</a>}
 
+                {/*Navbar link, der kun vises når man ikke er logget ind, som føre til Registration*/}
+                {!facade.loggedIn()
+                    && <a className="nav-item nav-link" href="/registration">Sign-up</a>}
+
+                {/*Navbar link, der kun bliver vist for login, med rollen Admin*/}
+                {facade.loggedIn() && facade.readJwtToken(facade.getToken()).roles.includes("admin") &&
+                    <a className="nav-item nav-link" href="/admin">Admin</a>
+                }
+
+                {/*Navbar element, der opdeler Navbaren mellem normale links og login formularen*/}
                 <div className="Nav-right">
+                    {/*check om brugeren er logget ind eller ej*/}
                     {!loggedIn ? (<LogIn login={login}/>) :
                         (<div className="login-container">
                             <button type="button" className="btn btn-primary">

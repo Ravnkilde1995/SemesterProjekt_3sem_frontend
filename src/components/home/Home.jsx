@@ -4,18 +4,20 @@ import "./home.css";
 const Home = () => {
     return (
         <div>
-            <div className="jumbotron">
-                <h1 className="display-4">Hello, world!</h1>
+            <div className="jumbotron" >
+                <h1 className="display-4">Welcome to the E-book library</h1>
                 <p className="lead">
-                    This is a simple hero unit, a simple jumbotron-style component for calling extra
-                    attention to featured content or information.
+                    If you have an existing account, you can log in and look through our selection of books, and add them to your bookshelf.
+                    <br/>
+                    <br/>
+                    If you want to know more, you can read about the project on our about page.
                 </p>
+                <a className="btn btn-primary btn-lg" href="/about" role="button">About</a>
                 <hr className="my-4" />
                 <p>
-                    It uses utility classes for typography and spacing to space content out within the larger
-                    container.
+                    If you don't have an account, you can create one by clicking the button below, and get started in just a few minutes.
                 </p>
-                <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                <a className="btn btn-primary btn-lg" href="/registration" role="button">Sign up!</a>
             </div>
         </div>
     );

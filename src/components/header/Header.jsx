@@ -32,7 +32,7 @@ const Header = ({loggedIn, setLoggedIn, user, setUser}) => {
         <div className="container-fluid flex-fill">
             <nav className="Nav">
                 {/*Ikon i venstre hjørne, som fører til forsiden*/}
-                <a className="nav-icon active" href="/"><img src="/img.png" height="77px" alt=""></img></a>
+                <a className="nav-icon active" href="/"><img src="/Navbar-Icon.png" height="77px" alt=""></img></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
                         aria-expanded="false" aria-label="Toggle navigation">

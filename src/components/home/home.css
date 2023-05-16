@@ -1,3 +1,6 @@
 .jumbotron{
     margin: 20px;
+    padding: 20px;
+    background-color: #003d76;
+    color: white;
 }

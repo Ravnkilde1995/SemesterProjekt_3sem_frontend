@@ -5,45 +5,76 @@ import Card from 'react-bootstrap/Card';
 
 const About = () => {
     return (
+        
+        <div className="text-center">
+            <br />
+            <h1>About us!</h1>
+            <br />
         <div className="card_container">
-            <Card style={{width: '18rem'}}>
-                <Card.Img variant="top" src="/Book-Icon.png" />
-                <Card.Body>
-                    <Card.Title>Add Books to Bookshelf</Card.Title>
+
+            <Card style={{width: '16rem'}}>
+                <Card.Img variant="top" src="/user-picture.png"/>
+                <Card.Body className="bg-primary text-white">
+                    <Card.Title>Abdullah Marwan</Card.Title>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        Developer
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Card.Text>
+                    Student at the Copenhagen Business academy Lyngby, as a computer scientist. Employment:
+                    Full stack programming
+                    </Card.Text>
+                    <Button variant="warning">Contact</Button>
                 </Card.Body>
             </Card>
 
              
 
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="/Book-Icon.png"  />
-                <Card.Body>
-                    <Card.Title>Check out the Library</Card.Title>
+            <Card style={{width: '16rem'}}>
+                <Card.Img variant="top" src="/user-picture.png"/>
+                <Card.Body className="bg-primary text-white">
+                    <Card.Title>Christoffer Humblebæk</Card.Title>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        Developer
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Card.Text>
+                    Student at the Copenhagen Business academy Lyngby, as a computer scientist. Employment:
+                    Full stack programming
+                    </Card.Text>
+                    <Button variant="warning">Contact</Button>
                 </Card.Body>
             </Card>
 
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="/Book-Icon.png"  />
-                <Card.Body>
-                    <Card.Title>Review your books</Card.Title>
+            <Card style={{width: '16rem'}}>
+                <Card.Img variant="top" src="/user-picture.png"/>
+                <Card.Body className="bg-primary text-white">
+                    <Card.Title> Nikolaj Kaspersen</Card.Title>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        Developer/SCRUM Master
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Card.Text>
+                    Student at the Copenhagen Business academy Lyngby, as a computer scientist. Employment:
+                    Full stack programming
+                    </Card.Text>
+                    <Button variant="warning">Contact</Button>
                 </Card.Body>
             </Card>
 
+            <Card style={{width: '16rem'}}>
+                <Card.Img variant="top" src="/user-picture.png"/>
+                <Card.Body className="bg-primary text-white">
+                    <Card.Title> Oliver Ravnkilde</Card.Title>
+                    <Card.Text>
+                        Developer
+                    </Card.Text>
+                    <Card.Text>
+                    Student at the Copenhagen Business academy Lyngby, as a computer scientist. Employment:
+                    Full stack programming
+                    </Card.Text>
+                    <Button variant="warning">Contact</Button>
+                </Card.Body>
+            </Card>
+
+        </div>
         </div>
     );
 }

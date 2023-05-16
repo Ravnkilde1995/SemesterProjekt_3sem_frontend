@@ -1,23 +1,77 @@
 import React from "react";
 import "./contact.css";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 const Contact = () => {
-
-    // test
     return (
-        <div>
-            <div className="jumbotron">
-                <h1 className="display-4">Contact Page</h1>
-                <p className="lead">
-                    This is a simple hero unit, a simple jumbotron-style component for calling extra
-                    attention to featured content or information.
-                </p>
-                <hr className="my-4" />
-                <p>
-                    It uses utility classes for typography and spacing to space content out within the larger
-                    container.
-                </p>
-                <a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <div className="text-center">
+            <br/>
+            <h1>Contact us!</h1>
+            <br/>
+            <div className="card_container">
+
+                <Card style={{width: '16rem'}}>
+                    <Card.Img variant="top" src="/user-picture.png"/>
+                    <Card.Body className="bg-primary text-white">
+                        <Card.Title>Abdullah Marwan</Card.Title>
+                        <Card.Text>
+                            Developer
+                        </Card.Text>
+                        <Card.Text>
+                            Student at the Copenhagen Business academy Lyngby, as a computer scientist. Employment:
+                            Full stack programming
+                        </Card.Text>
+                        <Button variant="warning">Contact</Button>
+                    </Card.Body>
+                </Card>
+
+
+                <Card style={{width: '16rem'}}>
+                    <Card.Img variant="top" src="/user-picture.png"/>
+                    <Card.Body className="bg-primary text-white">
+                        <Card.Title>Christoffer Humblebæk</Card.Title>
+                        <Card.Text>
+                            Developer
+                        </Card.Text>
+                        <Card.Text>
+                            Student at the Copenhagen Business academy Lyngby, as a computer scientist. Employment:
+                            Full stack programming
+                        </Card.Text>
+                        <Button variant="warning">Contact</Button>
+                    </Card.Body>
+                </Card>
+
+                <Card style={{width: '16rem'}}>
+                    <Card.Img variant="top" src="/user-picture.png"/>
+                    <Card.Body className="bg-primary text-white">
+                        <Card.Title> Nikolaj Kaspersen</Card.Title>
+                        <Card.Text>
+                            Developer/SCRUM Master
+                        </Card.Text>
+                        <Card.Text>
+                            Student at the Copenhagen Business academy Lyngby, as a computer scientist. Employment:
+                            Full stack programming
+                        </Card.Text>
+                        <Button variant="warning">Contact</Button>
+                    </Card.Body>
+                </Card>
+
+                <Card style={{width: '16rem'}}>
+                    <Card.Img variant="top" src="/user-picture.png"/>
+                    <Card.Body className="bg-primary text-white">
+                        <Card.Title> Oliver Ravnkilde</Card.Title>
+                        <Card.Text>
+                            Developer
+                        </Card.Text>
+                        <Card.Text>
+                            Student at the Copenhagen Business academy Lyngby, as a computer scientist. Employment:
+                            Full stack programming
+                        </Card.Text>
+                        <Button variant="warning">Contact</Button>
+                    </Card.Body>
+                </Card>
+
             </div>
         </div>
     );

@@ -8,10 +8,9 @@ const Contact = () => {
         <div className="text-center">
             <br/>
             <h1>Contact us!</h1>
-            <br/>
             <div className="card_container">
 
-                <Card style={{width: '16rem'}}>
+                <Card style={{width: '22rem', margin: '25px'}}>
                     <Card.Img variant="top" src="/user-picture.png"/>
                     <Card.Body className="bg-primary text-white">
                         <Card.Title>Abdullah Marwan</Card.Title>
@@ -26,8 +25,7 @@ const Contact = () => {
                     </Card.Body>
                 </Card>
 
-
-                <Card style={{width: '16rem'}}>
+                <Card style={{width: '22rem', margin: '25px'}}>
                     <Card.Img variant="top" src="/user-picture.png"/>
                     <Card.Body className="bg-primary text-white">
                         <Card.Title>Christoffer Humblebæk</Card.Title>
@@ -42,7 +40,7 @@ const Contact = () => {
                     </Card.Body>
                 </Card>
 
-                <Card style={{width: '16rem'}}>
+                <Card style={{width: '22rem', margin: '25px'}}>
                     <Card.Img variant="top" src="/user-picture.png"/>
                     <Card.Body className="bg-primary text-white">
                         <Card.Title> Nikolaj Kaspersen</Card.Title>
@@ -57,7 +55,7 @@ const Contact = () => {
                     </Card.Body>
                 </Card>
 
-                <Card style={{width: '16rem'}}>
+                <Card style={{width: '22rem', margin: '25px'}}>
                     <Card.Img variant="top" src="/user-picture.png"/>
                     <Card.Body className="bg-primary text-white">
                         <Card.Title> Oliver Ravnkilde</Card.Title>

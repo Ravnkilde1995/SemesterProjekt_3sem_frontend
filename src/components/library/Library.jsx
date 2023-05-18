@@ -36,12 +36,14 @@ function Library() {
 
     const book = {};
 
+    // const loggedIn = facade.loggedIn();
+
     //TODO Merge addToShelf and addBook functions together
 
     const addBook = (title, author, description, id) => {
-      const username = facade.readJwtToken(facade.getToken()).username
-        
-      // const url =
+        const username = facade.readJwtToken(facade.getToken()).username
+
+        // const url =
         //   "https://chriswihudat.dk/tomcat/dat3_semesterProjek/api/bookshelf";
         const url = "http://localhost:8080/api/bookshelf";
         book.user_name = username;
@@ -69,6 +71,7 @@ function Library() {
 
     return (
         <div>
+
             <br></br>
             <h1>Books fetched from google</h1>
             <h3>{dataFromServer}</h3>
@@ -120,7 +123,8 @@ function Library() {
                 );
             })}
         </div>
-    );
+    )
 }
+
 
 export default Library;

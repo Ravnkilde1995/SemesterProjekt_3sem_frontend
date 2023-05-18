@@ -2,11 +2,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 60px;
+    margin: 30px;
     container-type: normal;
     align-items: center;
     image-size: 80%;
     padding: 30px;
 
-
 }
+

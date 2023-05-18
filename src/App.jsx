@@ -36,6 +36,7 @@ function App() {
                     <Route path="/library" element={<Library/>}/>
                     <Route path="/bookshelf" element={<Bookshelf/>}/>
                     <Route path="/registration" element={<Registration/>}/>
+                    <Route path="/admin" element={<Admin/>}/>
                     <Route path="/login"
                            element={<LogIn loggedIn={loggedIn} setLoggedIn={setLoggedIn} user={user}
                                            setUser={setUser}/>}/>

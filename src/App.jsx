@@ -11,6 +11,7 @@ import Library from "./components/library/Library.jsx";
 import Contact from "./components/contact/Contact.jsx";
 import Registration from "./components/registration/registration";
 import Bookshelf from "./components/bookshelf/Bookshelf.jsx";
+import Admin from "./components/admin/Admin.jsx";
 
 
 function App() {

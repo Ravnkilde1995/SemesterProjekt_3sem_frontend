@@ -36,6 +36,11 @@ function apiFacade() {
         return fetch(URLBookshelf + user_name, options).then(handleHttpErrors);
     }
 
+    const fetchAllBookshelfData = () => {
+        const options = makeOptions("GET"); //True add's the token
+        return fetch(URLBookshelf + "all", options).then(handleHttpErrors);
+    }
+
     const fetchDataGoogle = () => {
         const options = makeOptions("GET");
        return fetch(GoogleURL, options).then(handleHttpErrors);
@@ -115,6 +120,7 @@ function apiFacade() {
         fetchDataGoogle,
         readJwtToken,
         fetchBookshelfData,
+        fetchAllBookshelfData,
 
         review(bookshelfId, bookId, reviewScore, reviewText) {
 

@@ -11,6 +11,7 @@ import Library from "./components/library/Library.jsx";
 import Contact from "./components/contact/Contact.jsx";
 import Registration from "./components/registration/registration";
 import Bookshelf from "./components/bookshelf/Bookshelf.jsx";
+import Table_Example from "./components/Page_Example/Table_Example.jsx";
 
 
 function App() {
@@ -30,10 +31,12 @@ function App() {
             <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} user={user} setUser={setUser}/>
             <BrowserRouter>
                 <Routes>
+                    {/*TODO opdater routes til at matche Eksamen*/}
                     <Route path="/" element={<Home/>}/>
                     <Route path="/about" element={<About/>}/>
+                    <Route path="/contact" element={<Contact/>}/>
                     <Route path="/library" element={<Library/>}/>
-                    <Route path="/bookshelf" element={<Bookshelf/>}/>
+                    <Route path="/table_example" element={<Table_Example/>}/>
                     <Route path="/registration" element={<Registration/>}/>
                     <Route path="/login"
                            element={<LogIn loggedIn={loggedIn} setLoggedIn={setLoggedIn} user={user}

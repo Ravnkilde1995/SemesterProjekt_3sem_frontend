@@ -1,4 +1,3 @@
-import review from "./components/review/Review.jsx";
 
 const URL = "http://localhost:8080";
 const URLBookshelf = "http://localhost:8080/api/bookshelf/";
